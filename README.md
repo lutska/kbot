@@ -13,6 +13,7 @@ https://t.me/SanaHappyMiBot
 
 
 ## Project Structure
+```text
 .
 ├── cmd/                  # the main command implementations
 │   ├── kbot.go           # bot logic implementation 
@@ -20,7 +21,7 @@ https://t.me/SanaHappyMiBot
 │   ├── version.go        # version command 
 ├── main.go               # entry point
 └── .gitignore
-
+```
 
 ## Prerequisites
 
@@ -61,25 +62,28 @@ go build -ldflags "-X="github.com/lutska/kbot/cmd.appVersion=<VERSION>
 
 ## Usage
 
-Start the bot:
+### Start the bot:
 
 ```bash
 ./kbot start
 ```
-on Telegram:
+### Telegram interaction
 
-1. User: 
-```bash
+**User:**
+```text
 /start hello
 ```
-Bot:
-```bash
+**Bot:**
+```text
 Hi there I'm Kbot v 1.0.1
 ```
-2. User:
-enters any other message
-Bot:
-```bash
+---
+**User:**
+```text
+any other message
+```
+**Bot:**
+```text
 I am still learning, please get back later
 ```
 
