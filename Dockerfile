@@ -1,7 +1,11 @@
 FROM quay.io/projectquay/golang:1.26 AS builder
 
+ARG TARGETOS
+ARG TAREGETARCH
+
 WORKDIR /go/src/app 
 COPY . .
+
 RUN make build
 
 FROM scratch

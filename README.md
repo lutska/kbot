@@ -10,6 +10,8 @@ https://t.me/SanaHappyMiBot
 - Supports basic commands (/start)
 - Built with CLI interface using Cobra
 - Uses Telegram Bot API via Telebot
+- Cross-platform build support
+- Dockerized deployment ready
 
 
 ## Project Structure
@@ -20,7 +22,11 @@ https://t.me/SanaHappyMiBot
 │   ├── root.go           # root command configuration
 │   ├── version.go        # version command 
 ├── main.go               # entry point
+├── Makefile              # build automation
+├── Dockerfile            # container build
+├── .env.example          # environment template
 └── .gitignore
+
 ```
 
 ## Prerequisites
