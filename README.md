@@ -10,8 +10,9 @@ https://t.me/SanaHappyMiBot
 - Supports basic commands (/start)
 - Built with CLI interface using Cobra
 - Uses Telegram Bot API via Telebot
-- Cross-platform build support
-- Dockerized deployment ready
+- Cross-platform build support (Linux, macOS, Windows, ARM)
+- Docker-ready deployment
+- Artifact Registry support (GCP)
 
 
 ## Project Structure
@@ -36,7 +37,7 @@ https://t.me/SanaHappyMiBot
 - Required Go packages:
   - github.com/spf13/cobra
   - gopkg.in/telebot.v4
-
+- Docker
 
 
 ## Setup
@@ -97,6 +98,22 @@ I am still learning, please get back later
 
 - `/start hello` - Get a greeting from the bot with current version number
 
+
+### Makefile Commands
+
+```bash
+Available commands:
+
+  make build       Build binary for local platform
+  make linux       Build binary for Linux (amd64)
+  make windows     Build binary for Windows (amd64)
+  make macos       Build binary for macOS (arm64)
+  make arm         Build binary for Linux ARM64
+
+  make image       Build Docker image (Linux runtime)
+  make push        Push image to GCP Artifact Registry
+  make clean       Clean build artifacts
+```
 
 ## License
 

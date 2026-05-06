@@ -1,12 +1,13 @@
 FROM quay.io/projectquay/golang:1.26 AS builder
 
 ARG TARGETOS
-ARG TAREGETARCH
+ARG TARGETARCH
 
 WORKDIR /go/src/app 
 COPY . .
 
-RUN make build
+RUN CGO_ENABLED=0 GOOS=${TARGETOS} GOARCH=${TARGETARCH} \
+    go build -o kbot 
 
 FROM scratch
 WORKDIR /
